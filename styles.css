@@ -7,7 +7,7 @@
   --darker-bg: #000911;
   --card-bg: rgba(0, 38, 55, 0.6);
   
-  /* Upgraded spacing and effects */
+  /* Adjust card and background properties for better contrast */
   --section-padding: 6rem 0;
   --blur-intensity: blur(12px);
   --neumorphic-shadow: 8px 8px 16px #000911, 
@@ -61,7 +61,7 @@ body::before {
   width: 100vw;
   height: 100vh;
   z-index: -2;
-  opacity: 0.05;
+  opacity: 0.08;
 }
 
 .node {
@@ -95,7 +95,7 @@ body::before {
   height: 100%;
   background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
   z-index: -1;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 #particles-js:after {
@@ -116,7 +116,7 @@ body::before {
 header {
   position: fixed;
   width: 100%;
-  background: rgba(0, 23, 31, 0.95);
+  background: rgba(0, 18, 25, 0.98);
   padding: 1rem 2rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   z-index: 1000;
@@ -234,6 +234,11 @@ section {
   margin: 0;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 18, 25, 0.97) 0%,
+    rgba(0, 38, 55, 0.95) 100%
+  );
 }
 
 section:not(:first-child) {
@@ -432,7 +437,10 @@ section > div:not(.hero-content):not(.profile-section) {
   margin-top: 2rem;
 }
 
-.skill-card, .project-card, .experience-card {
+.skill-card, .project-card, .education-card, .experience-card, .achievement-card {
+  background: rgba(0, 38, 55, 0.85);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   min-height: 280px;
   padding: var(--content-padding);
   height: 100%;
@@ -440,10 +448,6 @@ section > div:not(.hero-content):not(.profile-section) {
   flex-direction: column;
   border-radius: 12px;
   backdrop-filter: var(--blur-intensity);
-  background: var(--card-bg);
-  border: 1px solid rgba(0, 212, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(0, 212, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card::before {
@@ -486,7 +490,7 @@ section > div:not(.hero-content):not(.profile-section) {
 }
 
 .skill-card p {
-  color: #a0a0a0;
+  color: #d0d0d0;
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
@@ -496,7 +500,7 @@ section > div:not(.hero-content):not(.profile-section) {
   padding: 0;
   margin-top: 1rem;
   font-size: 0.85rem;
-  color: var(--text-color);
+  color: #e0e0e0;
 }
 
 .skill-details li {
@@ -576,10 +580,9 @@ section > div:not(.hero-content):not(.profile-section) {
   flex-direction: column;
   border-radius: 12px;
   backdrop-filter: var(--blur-intensity);
-  background: var(--card-bg);
+  background: rgba(0, 38, 55, 0.85);
   border: 1px solid rgba(0, 212, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(0, 212, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 .project-card::before {
@@ -617,7 +620,7 @@ section > div:not(.hero-content):not(.profile-section) {
 }
 
 .project-card p {
-  color: #a0a0a0;
+  color: #d0d0d0;
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
 }
@@ -629,7 +632,7 @@ section > div:not(.hero-content):not(.profile-section) {
 }
 
 .project-details li {
-  color: var(--text-color);
+  color: #e0e0e0;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
   position: relative;
@@ -655,11 +658,11 @@ section > div:not(.hero-content):not(.profile-section) {
   background: rgba(0, 168, 232, 0.1);
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  color: var(--text-color);
-  font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.9rem;
 }
 
 .tech-stack span i {
@@ -727,6 +730,9 @@ section > div:not(.hero-content):not(.profile-section) {
 }
 
 .education-card {
+  background: rgba(0, 38, 55, 0.85);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   min-height: 280px;
   padding: var(--content-padding);
   height: 100%;
@@ -734,10 +740,6 @@ section > div:not(.hero-content):not(.profile-section) {
   flex-direction: column;
   border-radius: 12px;
   backdrop-filter: var(--blur-intensity);
-  background: var(--card-bg);
-  border: 1px solid rgba(0, 212, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(0, 212, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .education-card::before {
@@ -806,7 +808,7 @@ section > div:not(.hero-content):not(.profile-section) {
 }
 
 .certification-list li {
-  color: var(--text-color);
+  color: #e0e0e0;
   margin-bottom: 0.8rem;
   position: relative;
   padding-left: 1.5rem;
@@ -823,6 +825,9 @@ section > div:not(.hero-content):not(.profile-section) {
 }
 
 .experience-card {
+  background: rgba(0, 38, 55, 0.85);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   min-height: 280px;
   padding: var(--content-padding);
   height: 100%;
@@ -830,10 +835,6 @@ section > div:not(.hero-content):not(.profile-section) {
   flex-direction: column;
   border-radius: 12px;
   backdrop-filter: var(--blur-intensity);
-  background: var(--card-bg);
-  border: 1px solid rgba(0, 212, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(0, 212, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience-card::before {
@@ -888,7 +889,7 @@ section > div:not(.hero-content):not(.profile-section) {
 }
 
 .experience-details li {
-  color: var(--text-color);
+  color: #e0e0e0;
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
   position: relative;
@@ -905,11 +906,12 @@ section > div:not(.hero-content):not(.profile-section) {
 }
 
 .achievement-card {
-  background: var(--card-bg);
+  background: rgba(0, 38, 55, 0.85);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   padding: var(--content-padding);
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
   backdrop-filter: blur(10px);
   background: rgba(0, 38, 55, 0.8);
@@ -1079,7 +1081,7 @@ footer {
   stroke: var(--primary-color);
   stroke-width: 2;
   fill: none;
-  opacity: 0.1;
+  opacity: 0.15;
 }
 
 @media (max-width: 1200px) {
